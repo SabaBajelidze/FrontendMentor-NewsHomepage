@@ -19,7 +19,7 @@
 
 body {
   font-size: 15px;
-  padding: 30px 20px;
+  padding: 30px 0;
 }
 
 /* Navigation Styles */
@@ -28,11 +28,14 @@ nav {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  width: 90%; 
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
 #nav-icon {
   max-height: 20px;
+  z-index: 3;
 }
 
 nav h1 {
@@ -41,7 +44,10 @@ nav h1 {
   color: var(--very-dark-blue);
 }
 
-/* Container styles */
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 
 
@@ -131,4 +137,11 @@ button {
   font-weight: 800;
   font-size: 1.2em;
   margin-bottom: 10px;
+}
+
+/* menu items class */
+
+.menu-item {
+  color: var(--very-dark-blue);
+  font-size: 1.15em;
 }
