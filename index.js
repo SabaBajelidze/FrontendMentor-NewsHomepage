@@ -1,7 +1,28 @@
+const mediaQuery = window.matchMedia('(min-width: 850px)');
+const navUl = document.getElementById('nav-ul');
+const imageGrid = document.getElementById('web3-mobile');
+
+
+if(mediaQuery.matches) {
+  navUl.style.display = 'block';
+  imageGrid.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
+}
+
+mediaQuery.addEventListener('change', () => {
+  if(mediaQuery.matches) {
+    navUl.style.display = 'block';
+    imageGrid.setAttribute('src', './assets/images/image-web-3-desktop.jpg');
+  } else {
+    navUl.style.display = 'none';
+    imageGrid.setAttribute('src', './assets/images/image-web-3-mobile.jpg');
+  }
+})
+
 const menuOpen = document.getElementById('nav-icon');
 
 let div;
 let background;
+let list;
 
 menuOpen.addEventListener('click', () => {
   if(Array.from(menuOpen.attributes)[0].nodeValue === './assets/images/icon-menu.svg') {
@@ -32,7 +53,7 @@ function handleMenuOpen() {
   div.style.zIndex = '2';
   div.style.height = '100vh';
   
-  let list = document.createElement('ul');
+  list = document.createElement('ul');
 
   let home = document.createElement('li');
   let newLi = document.createElement('li');
